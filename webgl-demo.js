@@ -57,6 +57,13 @@ function main() {
   // Initialize a shader program; this is where all the lighting
   // for the vertices and so forth is established.
   const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
+
+  // Here's where we call the routine that builds all the
+  // objects we'll be drawing.
+  const buffers = initBuffers(gl);
+  
+  // Draw the scene
+  drawScene(gl, programInfo, buffers);
 }
 
 //
